@@ -7,7 +7,7 @@ using TMPro;
 public class QuestDialogPanel : UIPanel
 {
     [Header("Dialog UI")]
-    public List<QuestScriptableObject> dialogOptions;
+    public List<QuestSO> dialogOptions;
     public Button nextButton;
     public TextMeshProUGUI text;
     public Image image;
