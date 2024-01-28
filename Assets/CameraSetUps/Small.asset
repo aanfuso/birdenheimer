@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Small
   m_EditorClassIdentifier: Assembly-CSharp::CameraSetUp
-  offset: {x: 0, y: 5.1, z: 3}
+  offset: {x: 0, y: 11.9, z: 7}
   sizeState: 0

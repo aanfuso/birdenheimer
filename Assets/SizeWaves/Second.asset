@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Second
+  m_EditorClassIdentifier: Assembly-CSharp::GrowthWave
+  upMass: 10
+  downMass: 1
+  currMass: 3
+  currCamera: {fileID: 11400000, guid: d819241c378c24749adb9acb2e8a7af2, type: 2}
+  size: 2
+  speed: 1.5
+  hungerPerSecond: 0.5

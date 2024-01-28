@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class PlayerCollisionWithObjects : MonoBehaviour
 {
     Rigidbody rb;
+    [SerializeField] Eating eating;
     [SerializeField] float minForce;
     [SerializeField] float maxForce;
     [SerializeField] MouseMovement mouseMovement;
@@ -19,8 +21,16 @@ public class PlayerCollisionWithObjects : MonoBehaviour
     {
         if(collision.gameObject.tag == "Object" || collision.gameObject.tag == "Vehicle")
         {
-            PlayerCollides(this.gameObject, collision.gameObject);
-            mouseMovement.DisableMouseForSeconds(1f, Time.time);
+            if (collision.gameObject.GetComponent<EdibleObject>() != null)
+            {
+                EdibleObject edible = collision.gameObject.GetComponent<EdibleObject>();
+
+                if (eating.mass < edible.edible.mass)
+                {
+                    PlayerCollides(this.gameObject, collision.gameObject);
+                    mouseMovement.DisableMouseForSeconds(1f, Time.time);
+                }
+            }
         }   
     }
 

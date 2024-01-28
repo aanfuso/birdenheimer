@@ -5,6 +5,12 @@ using UnityEngine;
 public class BasicAnimations : MonoBehaviour
 {
     [SerializeField] Animator animator;
+    [SerializeField] Collider beakCollider;
+
+    private void Start()
+    {
+        beakCollider.enabled = false;
+    }
 
     public void SideWays()
     {
@@ -19,7 +25,10 @@ public class BasicAnimations : MonoBehaviour
     public IEnumerator EatAnim()
     {
         animator.SetBool("Eat", true);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.3f);
+        beakCollider.enabled=true;
+        yield return new WaitForSeconds(0.3f);
+        beakCollider.enabled = false;
         animator.SetBool("Eat", false);
     }
 

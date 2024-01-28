@@ -20,11 +20,15 @@ public class MouseMovement : MonoBehaviour
     bool rightMouseEnabled;
     float timeOfDisable;
     float timer;
+
+    float speedMultiplier;
+
     //bool isGoing = false;
 
 #if UNITY_STANDALONE
     void Start()
     {
+        speedMultiplier = 1.0f;
         rightMouseEnabled = true;      
     }
 
@@ -85,7 +89,7 @@ public class MouseMovement : MonoBehaviour
         targetRotation.eulerAngles = new Vector3(0, targetRotation.eulerAngles.y, 0);
 
         Vector3 targetVelocity = destination - transform.position;
-        targetVelocity = new Vector3(targetVelocity.x , 0f, targetVelocity.z).normalized * moveSpeed;
+        targetVelocity = new Vector3(targetVelocity.x , 0f, targetVelocity.z).normalized * moveSpeed * speedMultiplier;
 
         if (Quaternion.Angle(playerRb.rotation, targetRotation) > 0.5f)
         {
@@ -112,6 +116,11 @@ public class MouseMovement : MonoBehaviour
         }
       
         
+    }
+
+    public void ChangeSpeedMultyplier(float value)
+    {
+        speedMultiplier = value;
     }
 
     public void DisableMouseForSeconds(float seconds, float timeSnap)
