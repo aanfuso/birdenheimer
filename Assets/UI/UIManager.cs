@@ -59,36 +59,6 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            EventManager.TriggerEvent(UIEvents.ACTION_ATE, "10");
-        }
-
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            EventManager.TriggerEvent(UIEvents.ACTION_BOUNCED);
-        }
-
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            EventManager.TriggerEvent(UIEvents.ACTION_HUNGER, "5");
-        }
-
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            EventManager.TriggerEvent(UIEvents.HELP_SHOW);
-        }
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            EventManager.TriggerEvent(UIEvents.QUEST_SHOW);
-        }
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            EventManager.TriggerEvent(UIEvents.SETTINGS_SHOW);
-        }
-
         if (Input.GetKeyDown(KeyCode.P))
         {
             EventManager.TriggerEvent(UIEvents.PAUSE);
