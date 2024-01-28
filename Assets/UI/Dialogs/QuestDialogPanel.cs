@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class QuestDialogPanel : UIPanel
+public class QuestDialogPanel : MonoBehaviour
 {
     [Header("Dialog UI")]
     public List<QuestSO> dialogOptions;
@@ -14,8 +14,11 @@ public class QuestDialogPanel : UIPanel
 
     private int index = 0;
 
-    void Awake()
+    [SerializeField] private AudioSource source;
+
+    private void Awake()
     {
+        source = GetComponent<AudioSource>();
         nextButton.onClick.AddListener(Next);
     }
 
@@ -24,13 +27,20 @@ public class QuestDialogPanel : UIPanel
         if (index >= dialogOptions.Count - 1)
         {
             index = 0;
-        } else
+
+            EventManager.TriggerEvent(UIEvents.HELP_SHOW);
+        }
+        else
         {
             index++;
         }
 
-        text.text = dialogOptions[index].textBody;
-        image.sprite = dialogOptions[index].sprite;
+        QuestSO dialog = dialogOptions[index];
+
+        text.text = dialog.textBody;
+        image.sprite = dialog.sprite;
+
+        source.PlayOneShot(dialog.sound, 1F);
     }
 }
 

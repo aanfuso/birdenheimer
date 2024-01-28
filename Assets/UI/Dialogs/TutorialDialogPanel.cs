@@ -3,21 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor.iOS;
 
-public class TutorialDialogPanel : UIPanel
+public class TutorialDialogPanel : MonoBehaviour
 {
     [Header("Dialog UI")]
     public List<TutorialSO> dialogOptions;
-    public Button nextButton;
+    public Button nextButtonA;
+    public Button nextButtonB;
     public TextMeshProUGUI text;
     public Image image;
     public Image visualAid;
 
     private int index = 0;
 
+    [SerializeField] private AudioSource source;
+
     void Awake()
     {
-        nextButton.onClick.AddListener(Next);
+        nextButtonA.onClick.AddListener(Next);
+        nextButtonB.onClick.AddListener(Next);
+        source = GetComponent<AudioSource>();
     }
 
     public void Next()
@@ -25,15 +31,21 @@ public class TutorialDialogPanel : UIPanel
         if (index >= dialogOptions.Count - 1)
         {
             index = 0;
+            EventManager.TriggerEvent(UIEvents.CONTINUE);
+            EventManager.TriggerEvent(UIEvents.PAUSE);
         }
         else
         {
             index++;
         }
 
-        text.text = dialogOptions[index].textBody;
-        image.sprite = dialogOptions[index].sprite;
-        visualAid.sprite = dialogOptions[index].visualAid;
+        TutorialSO dialog = dialogOptions[index];
+
+        text.text = dialog.textBody;
+        image.sprite = dialog.sprite;
+        visualAid.sprite = dialog.visualAid;
+
+        source.PlayOneShot(dialog.sound, 1F);
     }
 }
 

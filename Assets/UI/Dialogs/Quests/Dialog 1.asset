@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8736db00da4244b4db1be27241010999, type: 3}
   m_Name: Dialog 1
   m_EditorClassIdentifier: 
-  questId: 1
   textBody: Coocoocoocoo coo coo coo! Coo coo, coo coo coo. Coo, coo coo coo coo.
     Coocoocoocoo, coo coo coo. Coo coo, coo coo coo coo. Coo coo coo, coo coo coo!
-  sprite: {fileID: -1062422862, guid: e08414cbf595b074f9d28907581ef183, type: 3}
+  sprite: {fileID: 232919216, guid: e08414cbf595b074f9d28907581ef183, type: 3}
+  sound: {fileID: 8300000, guid: e798227a66f5bb94e87ee1978c6f2eb0, type: 3}
