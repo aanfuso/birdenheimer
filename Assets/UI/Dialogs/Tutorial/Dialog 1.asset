@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textBody: Prrur, prrur, coo. Prrur, prrur, coo coo. Prrur, prruuu, coo coo!
   sprite: {fileID: 1289190403, guid: e08414cbf595b074f9d28907581ef183, type: 3}
-  visualAid: {fileID: 21300000, guid: b78ebcdf2f24dca46b4024293687b006, type: 3}
+  visualAid: {fileID: 21300000, guid: 2187594e2fe3f3e4ca37ba3177f4958d, type: 3}
