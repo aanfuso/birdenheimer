@@ -5,6 +5,7 @@ public static class UIEvents
 
     public const string HELP_SHOW = "help:show";
     public const string QUEST_SHOW = "quest:show";
+    public const string QUEST_HIDE = "quest:hide";
     public const string SETTINGS_SHOW = "settings:show";
 
     public const string ACTION_ATE = "action:ate";

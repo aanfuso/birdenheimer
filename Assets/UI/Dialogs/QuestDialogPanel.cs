@@ -27,7 +27,10 @@ public class QuestDialogPanel : MonoBehaviour
         if (index >= dialogOptions.Count - 1)
         {
             index = 0;
-        } else
+
+            EventManager.TriggerEvent(UIEvents.HELP_SHOW);
+        }
+        else
         {
             index++;
         }

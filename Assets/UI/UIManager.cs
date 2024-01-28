@@ -38,17 +38,19 @@ public class UIManager : MonoBehaviour
 
     void OnContinue(string eventName, string message)
     {
-        this.introPanel.SetActive(false);
+        this.helpPanel.SetActive(false);
         this.gameOverlay.SetActive(true);
     }
 
     void OnHelp(string eventName, string message)
     {
+        this.questPanel.SetActive(false);
         this.helpPanel.SetActive(true);
     }
 
     void OnQuest(string eventName, string message)
     {
+        this.introPanel.SetActive(false);
         this.questPanel.SetActive(true);
     }
 

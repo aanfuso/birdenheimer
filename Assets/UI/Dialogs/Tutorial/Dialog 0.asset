@@ -15,3 +15,4 @@ MonoBehaviour:
   textBody: Coo, coo coo coo. Prrur, coo . Coocoocoocoo coo coo coooo! Prrur, prrur.
   sprite: {fileID: -1062422862, guid: e08414cbf595b074f9d28907581ef183, type: 3}
   visualAid: {fileID: 21300000, guid: b78ebcdf2f24dca46b4024293687b006, type: 3}
+  sound: {fileID: 8300000, guid: bc705ae6e90dd3c4a8294cdb0d91994a, type: 3}

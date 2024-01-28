@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textBody: 'Purc purc. Cuuu cuuu prrc prrc. Coo coo coo coo. Cuuu cuuu cuuu cuuu.
     Purc purc purc purc. '
-  sprite: {fileID: 1289190403, guid: e08414cbf595b074f9d28907581ef183, type: 3}
+  sprite: {fileID: -1062422862, guid: e08414cbf595b074f9d28907581ef183, type: 3}
   sound: {fileID: 8300000, guid: bc705ae6e90dd3c4a8294cdb0d91994a, type: 3}

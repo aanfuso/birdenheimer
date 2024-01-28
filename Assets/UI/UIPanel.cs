@@ -17,7 +17,6 @@ public class UIPanel : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log("Awake UIPanel");
         this.source = GetComponent<AudioSource>();
     }
 
