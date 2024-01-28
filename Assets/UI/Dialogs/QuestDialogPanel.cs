@@ -12,10 +12,15 @@ public class QuestDialogPanel : UIPanel
     public TextMeshProUGUI text;
     public Image image;
 
+    private AudioSource source;
+
+
     private int index = 0;
 
     void Awake()
     {
+        source = GetComponent<AudioSource>();
+
         nextButton.onClick.AddListener(Next);
     }
 

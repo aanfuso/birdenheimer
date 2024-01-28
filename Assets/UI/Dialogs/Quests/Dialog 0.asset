@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8736db00da4244b4db1be27241010999, type: 3}
   m_Name: Dialog 0
   m_EditorClassIdentifier: 
-  questId: 1
   textBody: Prrc prrc cuuu cuuu. Purc purc coo coo. Prrc prrc prrc coo coo coo prrc.
   sprite: {fileID: 232919216, guid: e08414cbf595b074f9d28907581ef183, type: 3}
+  sound: {fileID: 8300000, guid: bc705ae6e90dd3c4a8294cdb0d91994a, type: 3}
