@@ -18,6 +18,6 @@ public class IntroPanel : UIPanel
     void ContinueGame()
     {
         EventManager.TriggerEvent(UIEvents.CONTINUE);
-        EventManager.TriggerEvent(UIEvents.PAUSE);
+        EventManager.TriggerEvent(UIEvents.QUEST_SHOW);
     }
 }
