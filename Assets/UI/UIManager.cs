@@ -71,6 +71,11 @@ public class UIManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.H))
         {
+            EventManager.TriggerEvent(UIEvents.ACTION_HUNGER, "5");
+        }
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
             EventManager.TriggerEvent(UIEvents.HELP_SHOW);
         }
 
