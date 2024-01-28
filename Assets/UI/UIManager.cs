@@ -5,26 +5,40 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject gameOverlay;
+    public GameObject introPanel;
     public GameObject settingsPanel;
     public GameObject helpPanel;
     public GameObject questPanel;
+    public GameObject gameOverlay;
 
     [Header("Game Status")]
-    [SerializeField] private bool isPause = false;
+    [SerializeField] private bool isPause = true;
+
+    void Start()
+    {
+        Time.timeScale = 0;
+    }
 
     void OnEnable()
     {
+        EventManager.StartListening(UIEvents.PAUSE, OnPause);
+        EventManager.StartListening(UIEvents.CONTINUE, OnContinue);
+
         EventManager.StartListening(UIEvents.HELP_SHOW, OnHelp);
         EventManager.StartListening(UIEvents.QUEST_SHOW, OnQuest);
         EventManager.StartListening(UIEvents.SETTINGS_SHOW, OnSettings);
     }
 
-    void OnDisable()
+    void OnPause(string eventName, string message)
     {
-        EventManager.StopListening(UIEvents.HELP_SHOW, OnHelp);
-        EventManager.StopListening(UIEvents.QUEST_SHOW, OnQuest);
-        EventManager.StopListening(UIEvents.SETTINGS_SHOW, OnSettings);
+        isPause = !isPause;
+
+        Time.timeScale = isPause ? 1 : 0;
+    }
+
+    void OnContinue(string eventName, string message)
+    {
+        this.introPanel.SetActive(false);
     }
 
     void OnHelp(string eventName, string message)
@@ -71,9 +85,7 @@ public class UIManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.P))
         {
-            isPause = !isPause;
-
-            Time.timeScale = isPause ? 1 : 0;
+            EventManager.TriggerEvent(UIEvents.PAUSE);
         }
     }
 }
