@@ -3,34 +3,39 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 using UnityEngine.UI;
 
 public class GameOverlay : MonoBehaviour
 {
-    [Header("Pidgeon Stats")]
-    public int bounces = 0;
-    public int ckals = 5;
-
     [Header("UI")]
     public TextMeshProUGUI bouncesStreak;
     public Slider ckalBar;
 
-    private void Update()
-    {
-        // Triggers an update of the pidgeon calories bar.
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            ckals += 5;
-            ckalBar.value = ckals;
-            //EventManager.TriggerEvent(UIEvents.GET_CHARACTER);
-        }
+    private int _ckals = 0;
+    private int _bounces = 0;
 
-        // Triggers an update of the bounce streak counter.
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            string text = string.Format("<color=\"red\">Bounce Streak:</color> {0}", bounces++);
-            bouncesStreak.text = text;
-            //EventManager.TriggerEvent(UIEvents.GET_CHARACTER);
-        }
+    void OnEnable()
+    {
+        EventManager.StartListening(UIEvents.CKAL_UPDATE, OnUpdateCkal);
+        EventManager.StartListening(UIEvents.BOUNCES_UPDATE, OnUpdateBounces);
+    }
+
+    void OnDisable()
+    {
+        EventManager.StopListening(UIEvents.CKAL_UPDATE, OnUpdateCkal);
+        EventManager.StopListening(UIEvents.BOUNCES_UPDATE, OnUpdateBounces);
+    }
+
+    private void OnUpdateCkal(string eventName, string message)
+    {
+        _ckals = int.Parse(message);
+        ckalBar.value = _ckals;
+    }
+
+    private void OnUpdateBounces(string eventName, string message)
+    {
+        _bounces = int.Parse(message);
+        bouncesStreak.text = string.Format("<color=\"red\">Bounce Streak:</color> {0}", _bounces);
     }
 }

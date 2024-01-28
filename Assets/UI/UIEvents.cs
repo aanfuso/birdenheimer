@@ -8,4 +8,6 @@ public static class UIEvents
 
     public const string ACTION_ATE = "action:ate";
     public const string ACTION_BOUNCED = "action:bounced";
+    public const string CKAL_UPDATE = "ckal:update";
+    public const string BOUNCES_UPDATE = "bounces:update";
 }

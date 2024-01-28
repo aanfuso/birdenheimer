@@ -46,7 +46,7 @@ public class UIManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            EventManager.TriggerEvent(UIEvents.ACTION_ATE);
+            EventManager.TriggerEvent(UIEvents.ACTION_ATE, "10");
         }
 
         if (Input.GetKeyDown(KeyCode.B))
