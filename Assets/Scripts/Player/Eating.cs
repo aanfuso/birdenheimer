@@ -112,24 +112,3 @@ public class Eating : MonoBehaviour
         SceneManager.LoadScene("TragicCity");
     }
 }
-
-[CreateAssetMenu]
-public class NutritionFacts: ScriptableObject
-{
-    public float mass;
-    public float calories;
-}
-
-[CreateAssetMenu]
-public class GrowthWave: ScriptableObject
-{
-    public float upMass;
-    public float downMass;
-
-    public float currMass;
-    public CameraSetUp currCamera;
-
-    public float size;
-    public float speed;
-    public float hungerPerSecond;
-}
