@@ -1,6 +1,7 @@
 public static class UIEvents
 {
     public const string PAUSE = "pause";
+    public const string CONTINUE = "continue";
 
     public const string HELP_SHOW = "help:show";
     public const string QUEST_SHOW = "quest:show";
