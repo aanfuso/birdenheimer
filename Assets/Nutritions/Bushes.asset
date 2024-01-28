@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Bushes
   m_EditorClassIdentifier: Assembly-CSharp::NutritionFacts
-  mass: 1.5
+  mass: 1
   calories: 200

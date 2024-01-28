@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: LargeBuildings
   m_EditorClassIdentifier: Assembly-CSharp::NutritionFacts
-  mass: 0
-  calories: 0
+  mass: 1000
+  calories: 123124

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Fourth
   m_EditorClassIdentifier: Assembly-CSharp::GrowthWave
-  upMass: 60
-  downMass: 10
-  currMass: 30
-  currCamera: {fileID: 0}
+  upMass: 350
+  downMass: 60
+  currMass: 100
+  currCamera: {fileID: 11400000, guid: 8348d81397a656840ad04c71f36cb30c, type: 2}
   size: 6
   speed: 4
-  hungerPerSecond: 5
+  hungerPerSecond: 8

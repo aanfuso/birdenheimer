@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GrowthWave
   upMass: 3
   downMass: 0
-  currMass: 1
+  currMass: 2
   currCamera: {fileID: 11400000, guid: 9997ff40b73d1e441a6fb6ba5614520d, type: 2}
   size: 1
   speed: 1
-  hungerPerSecond: 0.06
+  hungerPerSecond: 0.2

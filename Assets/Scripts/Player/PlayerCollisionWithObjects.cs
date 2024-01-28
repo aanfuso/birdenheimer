@@ -30,6 +30,10 @@ public class PlayerCollisionWithObjects : MonoBehaviour
                     PlayerCollides(this.gameObject, collision.gameObject);
                     mouseMovement.DisableMouseForSeconds(1f, Time.time);
                 }
+                else
+                {
+
+                }
             }
         }   
     }
@@ -40,6 +44,7 @@ public class PlayerCollisionWithObjects : MonoBehaviour
         mouseMovement.ResetDestinations();
         rb.velocity = Vector3.zero;
         rb.AddForce((player.transform.position - enemyObject.transform.position).normalized * forceMagnitude, ForceMode.Impulse);
+        EventManager.TriggerEvent(UIEvents.ACTION_BOUNCED);
 
-    } 
+    }
 }

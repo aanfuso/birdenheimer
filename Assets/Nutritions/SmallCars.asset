@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: SmallCars
   m_EditorClassIdentifier: Assembly-CSharp::NutritionFacts
-  mass: 20
+  mass: 100
   calories: 10000

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: SmallBuildings
   m_EditorClassIdentifier: Assembly-CSharp::NutritionFacts
-  mass: 60
+  mass: 400
   calories: 6000000

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Poles
   m_EditorClassIdentifier: Assembly-CSharp::NutritionFacts
-  mass: 15
+  mass: 20
   calories: 5000

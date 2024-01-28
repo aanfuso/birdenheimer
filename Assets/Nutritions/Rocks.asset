@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Rocks
   m_EditorClassIdentifier: Assembly-CSharp::NutritionFacts
-  mass: 5
+  mass: 7
   calories: 5000

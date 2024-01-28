@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Second
   m_EditorClassIdentifier: Assembly-CSharp::GrowthWave
   upMass: 10
-  downMass: 1
+  downMass: 2
   currMass: 3
   currCamera: {fileID: 11400000, guid: d819241c378c24749adb9acb2e8a7af2, type: 2}
   size: 2

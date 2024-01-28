@@ -10,8 +10,10 @@ public static class UIEvents
     public const string ACTION_ATE = "action:ate";
     public const string ACTION_BOUNCED = "action:bounced";
     public const string ACTION_HUNGER = "action:hunger";
+    public const string ACTION_HUNGER_SET = "action:hunger_set";
 
     public const string CKAL_UPDATE = "ckal:update";
     public const string BOUNCES_UPDATE = "bounces:update";
     public const string HUNGER_UPDATE = "hunger:update";
+    public const string HUNGER_RESET = "hunger:reset";
 }

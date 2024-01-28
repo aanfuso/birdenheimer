@@ -7,7 +7,7 @@ public class DataManager : MonoBehaviour
     [Header("Pidgeon Stats")]
     [SerializeField] private int bounces = 0;
     [SerializeField] private int ckals = 5;
-    [SerializeField] private int hunger = 50;
+    [SerializeField] private float hunger;
 
     void OnEnable()
     {
@@ -29,7 +29,8 @@ public class DataManager : MonoBehaviour
     }
     void OnHunger(string eventName, string message)
     {
-        hunger += int.Parse(message);
+        hunger += float.Parse(message);
+        Debug.Log(hunger);
         EventManager.TriggerEvent(UIEvents.HUNGER_UPDATE, hunger.ToString());
     }
 }

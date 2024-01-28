@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: LargeCars
   m_EditorClassIdentifier: Assembly-CSharp::NutritionFacts
-  mass: 30
+  mass: 400
   calories: 3000
